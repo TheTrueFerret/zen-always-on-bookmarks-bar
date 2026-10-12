@@ -12,13 +12,26 @@ Works in both normal and compact mode.
 
 ## Installation
 
-**With [Sine](https://github.com/CosmoCreeper/Sine):** search for
-"Always-On Bookmarks Bar" in the Sine marketplace, or add it directly by
-entering `TheTrueFerret/zen-always-on-bookmarks-bar`.
+**Linux / macOS:** run the install script, then restart Zen:
 
-**Manually:** copy the contents of [`chrome.css`](chrome.css) into
-`chrome/userChrome.css` in your Zen profile folder (find it via
-`about:support` > Profile Folder), set
+```sh
+curl -fsSL https://raw.githubusercontent.com/TheTrueFerret/zen-always-on-bookmarks-bar/main/install.sh | bash
+```
+
+It installs into the profile Zen opens by default (regular, Flatpak and macOS
+installs), keeps anything already in your `userChrome.css`, and can be re-run
+to update. Options (append after `| bash -s --`, or pass to `./install.sh` in a
+clone):
+
+- `--profile <dir>` – install into a specific profile folder
+  (see `about:support` > Profile Folder)
+- `--uninstall` – remove the mod again
+
+**With [Sine](https://github.com/CosmoCreeper/Sine):** add it by entering
+`TheTrueFerret/zen-always-on-bookmarks-bar`.
+
+**Manually (any OS, including Windows):** copy [`chrome.css`](chrome.css) into
+`chrome/userChrome.css` in your Zen profile folder, set
 `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` in
 `about:config`, and restart Zen.
 
