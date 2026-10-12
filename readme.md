@@ -10,6 +10,18 @@ of underneath it, so nothing is covered and nothing jumps when you hover.
 
 Works in both normal and compact mode.
 
+## Installation
+
+**With [Sine](https://github.com/CosmoCreeper/Sine):** search for
+"Always-On Bookmarks Bar" in the Sine marketplace, or add it directly by
+entering `TheTrueFerret/zen-always-on-bookmarks-bar`.
+
+**Manually:** copy the contents of [`chrome.css`](chrome.css) into
+`chrome/userChrome.css` in your Zen profile folder (find it via
+`about:support` > Profile Folder), set
+`toolkit.legacyUserProfileCustomizations.stylesheets` to `true` in
+`about:config`, and restart Zen.
+
 ## Usage
 
 1. Install the mod.

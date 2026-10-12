@@ -1,0 +1,18 @@
+{
+  "id": "zen-always-on-bookmarks-bar",
+  "homepage": "https://github.com/TheTrueFerret/zen-always-on-bookmarks-bar",
+  "author": "TheTrueFerret",
+  "name": "Always-On Bookmarks Bar",
+  "description": "Keeps Zen's bookmarks toolbar always visible instead of hiding it until you hover the top bar.",
+  "version": "1.0.0",
+  "createdAt": "2026-10-12",
+  "updatedAt": "2026-10-12",
+  "ai": "yes",
+  "readme": "https://raw.githubusercontent.com/TheTrueFerret/zen-always-on-bookmarks-bar/main/readme.md",
+  "image": "https://raw.githubusercontent.com/TheTrueFerret/zen-always-on-bookmarks-bar/main/image.png",
+  "style": {
+    "chrome": "chrome.css"
+  },
+  "tags": ["bookmarks", "toolbar", "UI"],
+  "fork": ["zen"]
+}
