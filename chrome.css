@@ -1,0 +1,33 @@
+/*
+ * Always-On Bookmarks Bar
+ *
+ * With Zen's default single-toolbar layout and `zen.view.hide-window-controls`
+ * enabled, the top strip that holds the bookmarks toolbar collapses until it
+ * is hovered. This keeps that strip expanded whenever the bookmarks toolbar
+ * itself is enabled (View > Toolbars > Bookmarks Toolbar > Always Show).
+ */
+
+:root[zen-single-toolbar='true'][zen-has-bookmarks]:not([customizing]):not([inDOMFullscreen='true']) {
+  & #zen-appcontent-navbar-wrapper {
+    height: var(--zen-toolbar-height) !important;
+    opacity: 1 !important;
+    transition: none !important;
+
+    & #zen-appcontent-navbar-container {
+      pointer-events: auto !important;
+    }
+
+    /* Show the window controls the same way Zen does while hovering, instead
+     * of leaving them clipped to zero height. */
+    & .titlebar-buttonbox-container {
+      max-height: 100% !important;
+    }
+  }
+
+  /* While the bar is hovered, Zen pulls the page up underneath it so the
+   * revealed bar overlays the page. The bar now takes up its own space, so
+   * keep the page where it is to avoid it jumping on hover. */
+  & #tabbrowser-tabpanels[has-toolbar-hovered] .browserContainer {
+    margin-top: 0 !important;
+  }
+}
