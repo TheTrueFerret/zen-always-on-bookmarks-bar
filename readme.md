@@ -27,10 +27,27 @@ clone):
   (see `about:support` > Profile Folder)
 - `--uninstall` – remove the mod again
 
+**Windows:** run this in PowerShell, then restart Zen:
+
+```powershell
+irm https://raw.githubusercontent.com/TheTrueFerret/zen-always-on-bookmarks-bar/main/install.ps1 | iex
+```
+
+It works the same way as the Linux / macOS script. To pass options, use:
+
+```powershell
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/TheTrueFerret/zen-always-on-bookmarks-bar/main/install.ps1))) -Uninstall
+```
+
+- `-ProfileDir <dir>` – install into a specific profile folder
+- `-Uninstall` – remove the mod again
+
+From a clone, run `powershell -ExecutionPolicy Bypass -File install.ps1`.
+
 **With [Sine](https://github.com/CosmoCreeper/Sine):** add it by entering
 `TheTrueFerret/zen-always-on-bookmarks-bar`.
 
-**Manually (any OS, including Windows):** copy [`chrome.css`](chrome.css) into
+**Manually (any OS):** copy [`chrome.css`](chrome.css) into
 `chrome/userChrome.css` in your Zen profile folder, set
 `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` in
 `about:config`, and restart Zen.
